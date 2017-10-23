@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body onload="initial();">
+<div class="wrap">
+    <div class="connect">
+        昵称：<input type="text" id="name">
+        <button id="openbtn" onclick="doOpen()">连接服务器</button>
+        <button id="closebtn" onclick="doClose()">断开连接</button>
+    </div>
+    <div class="userlist">
+        <div class="panel_header">
+            在线列表
+        </div>
+        <div class="panel_container" id="userlist">
+        </div>
+    </div>
+    <div class="container">
+        <div class="panel_header" id="talkTo">
+            虾聊【all】
+            <!--                 <button id="close" class="btn">
+                                <span class="btn_text">Close</span>
+                            </button> -->
+        </div>
+        <div class="chat_container" id="msg">
+        </div>
+        <div class="chat panel_footer">
+
+            <form action="" method="post" onsubmit="return doAction()">
+                <span><img src="/static/images/biaoqing.jpg" alt="" onclick="toggleFace()"></span>
+                <input type="text" id="message">
+                <button class="ok" type="submit">Send</button>
+            </form>
+        </div>
+        <div class="face">
+            {for start="1" end="99"}
+            <div><img src="/static/images/face/ali/ali ({$i}).gif" alt="" onclick="sendFace(this)"></div>
+            {/for}
+        </div>
+    </div>
+</div>
+<div style="position: absolute;bottom: 15%;left:50%;">
+    <span style="color:#00ff5c;">源码30元，购买请联系QQ:296720094</span>
+</div>
+<script src="/static/js/app.min.js"></script>
+</body>
+
+</html>
